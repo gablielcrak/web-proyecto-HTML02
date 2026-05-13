@@ -1,0 +1,85 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 40px 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #7f8c8d;
+}
+
+/* Contenedor de las tarjetas */
+.contenedor-clientes {
+    display: flex;
+    flex-wrap: wrap; /* Para que se acomoden si hay muchos */
+    justify-content: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Tarjeta Individual */
+.tarjeta-cliente {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-cliente:hover {
+    transform: translateY(-25px); /* Pequeño salto al pasar el mouse */
+}
+
+/* Alineación Foto + Nombre */
+.encabezado-cliente {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.foto-cliente {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Hace la foto circular */
+    object-fit: cover;
+    border: 3px solid #007bff; /* Borde azul profesional */
+}
+
+.info-cliente h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+.estrellas {
+    color: #f1c40f; /* Amarillo dorado */
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+/* Texto del Testimonio */
+.testimonio {
+    font-style: italic;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    padding-left: 15px;
+    border-left: 4px solid #007bff; /* Línea de adorno */
+}

@@ -1,0 +1,230 @@
+/* =========================================
+   ESTILO GLOBAL Y FONDO
+   ========================================= */
+body {
+    background-image: url('../img/fondo1.jpg'); /* El ../ es clave para salir de la carpeta CSS */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* Contenedor principal que centra la tarjeta blanca */
+.main-container {
+    padding: 60px 20px; 
+    display: flex;
+    justify-content: center;
+}
+
+/* Tarjeta Blanca (Efecto Elevado) */
+.white-card {
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con ligera transparencia */
+    margin: 30px auto;
+    padding: 40px;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+/* =========================================
+   TIPOGRAFÍA (h1, h2, h3, p)
+   ========================================= */
+h1 {
+    color: #002699; /* Azul oscuro */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+h2 {
+    color: #4c11ff; /* Morado vibrante */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-left: 5px solid #4c11ff; /* Línea decorativa */
+    padding-left: 15px;
+}
+
+h3 {
+    color: #1a1a3a; /* Azul casi negro */
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    color: #444; /* Gris oscuro para lectura fácil */
+    line-height: 1.7; 
+    font-size: 1.05rem;
+    margin-bottom: 15px;
+}
+
+p strong {
+    color: #002699;
+}
+
+/* =========================================
+   FOTO DE PERFIL
+   ========================================= */
+.foto-perfil {
+    width: 250px;      
+    height: 250px;     
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 5px solid #4c11ff; /* Cambiado a morado para combinar */
+    display: block;
+    margin: 0 auto 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   GALERÍA DE PROYECTOS
+   ========================================= */
+.proyectos {
+    padding: 50px 0;
+    background-color: transparent; /* Se integra con la tarjeta blanca */
+}
+
+.proyectos h2 {
+    text-align: center;
+    border-left: none;
+    padding-left: 0;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.tarjeta {
+    background: white;
+    width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.info h3 {
+    margin: 0 0 10px;
+    color: #007bff;
+}
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+/* =========================================
+   EXTRAS (Banner Hero)
+   ========================================= */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Estilos para la Galería de Proyectos */
+.proyectos {
+    padding: 40px 0;
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.proyectos h2 {
+    text-align: center;
+    color: #002699;
+    margin-bottom: 30px;
+}
+
+.galeria {
+    display: grid;
+    /* Esto crea columnas automáticas que se ajustan al tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+
+.tarjeta {
+    background: white;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Esto evita que la imagen se estire feo */
+    display: block;
+}
+
+.info {
+    padding: 15px;
+    text-align: center;
+}
+
+.info h3 {
+    font-size: 1.6rem;
+    margin: 0 0 15px;
+    color: #333;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}

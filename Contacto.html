@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Contacto - Jose Carhuachin</title>
+    <link rel="stylesheet" href="css/styles_Contacto.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>Centro de Contacto</h1>
+        <p>¿Tienes un proyecto en mente o necesitas ayuda técnica? ¡Hablemos!</p>
+    </header>
+
+    <main class="contenedor-principal">
+        
+        <div class="formulario-card">
+            <h3>Contacto General</h3>
+            <form action="guardar.php" method="POST">
+                <div class="grupo">
+                    <label>Nombre</label>
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                </div>
+                <div class="grupo">
+                    <label>Teléfono</label>
+                    <input type="tel" name="telefono" placeholder="Tu Teléfono">
+                </div>
+                <div class="grupo">
+                    <label>Correo</label>
+                    <input type="email" name="correo" placeholder="Tu Email" required>
+                </div>
+                <div class="grupo">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn-azul">Enviar Mensaje</button>
+            </form>
+        </div>
+
+        <div class="formulario-card">
+            <h3>Solicitar Presupuesto</h3>
+            <form action="guardar.php" method="POST">
+                <div class="grupo">
+                    <label>Nombre / Empresa</label>
+                    <input type="text" name="nombre" placeholder="Tu Nombre o Empresa" required>
+                </div>
+                <div class="grupo">
+                    <label>Tipo de Proyecto</label>
+                    <select name="tipo_proyecto">
+                        <option value="Diseño Web">Diseño Web</option>
+                        <option value="E-commerce">E-commerce</option>
+                        <option value="App Móvil">App Móvil</option>
+                    </select>
+                </div>
+                <div class="grupo">
+                    <label>Correo de Contacto</label>
+                    <input type="email" name="correo" placeholder="Email para enviarte la cotización" required>
+                </div>
+                <div class="grupo">
+                    <label>Detalles del Proyecto</label>
+                    <textarea name="mensaje" placeholder="Describe brevemente lo que necesitas..."></textarea>
+                </div>
+                <button type="submit" class="btn-verde">Pedir Cotización</button>
+            </form>
+        </div>
+
+        <div class="formulario-card">
+            <h3>Soporte Técnico</h3>
+            <form action="guardar.php" method="POST">
+                <div class="grupo">
+                    <label>Nombre del Cliente</label>
+                    <input type="text" name="nombre" placeholder="Tu Nombre" required>
+                </div>
+                <div class="grupo">
+                    <label>ID del Proyecto / Pedido</label>
+                    <input type="text" name="id_soporte" placeholder="Ej: PROY-102" required>
+                </div>
+                <div class="grupo">
+                    <label>Correo</label>
+                    <input type="email" name="correo" placeholder="Tu Email" required>
+                </div>
+                <div class="grupo">
+                    <label>Descripción del Problema</label>
+                    <textarea name="mensaje" placeholder="Explica la falla o duda técnica..."></textarea>
+                </div>
+                <button type="submit" class="btn-rojo">Abrir Ticket</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="vinculos-abajo">
+        
+        <a href="https://wa.me/51938500836?text=Hola%20Jose,%20vengo%20de%20tu%20web" target="_blank" class="link-item-btn">
+            <div class="link-item">
+                <span>📱 WhatsApp</span>
+                <p>+51 938 500 836</p>
+            </div>
+        </a>
+
+        <a href="mailto:josecarhuachin@gmail.com?subject=Consulta%20Web" class="link-item-btn">
+            <div class="link-item">
+                <span>✉️ Correo electrónico</span>
+                <p>josecarhuachin@gmail.com</p>
+            </div>
+        </a>
+
+    </footer>
+
+    <div style="text-align: center; padding-bottom: 40px;">
+        <a href="index.html" style="color: white; font-weight: bold; text-decoration: none;">← Volver al Inicio</a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

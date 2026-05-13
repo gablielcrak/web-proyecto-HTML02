@@ -1,0 +1,147 @@
+/* 1. Variables y Configuración */
+:root {
+    --blanco: #f8f8f8;
+    --oscuro: #171c49;
+    --primario: #171c49;
+    --secundario: #2c1fe9;
+    --gris: #525050;
+    --grisClaro: #0157c7;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+    margin: 0;
+}
+
+/* 2. Tipografía y Títulos */
+h1, h2, h3 { text-align: center; margin: 0; padding: 2rem 0; }
+h1 { font-size: 3.8rem; background-color: rgb(7, 52, 202); color: white; }
+h2 { font-size: 2.8rem; color: var(--primario); }
+h3 { font-size: 1.8rem; }
+.titulo span { font-size: 2rem; font-weight: normal; }
+
+/* 3. Layout y Contenedores */
+.contenedor { max-width: 120rem; margin: 0 auto; }
+.sombra {
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    background-color: var(--blanco);
+    padding: 3rem;
+    border-radius: 1rem;
+    margin-top: -3rem; /* Efecto sobre el Hero */
+    position: relative;
+}
+
+/* 4. Navegación */
+.nav-bg { background-color: var(--secundario); }
+.navegacion-principal { display: flex; flex-direction: column; }
+
+@media (min-width: 768px) {
+    .navegacion-principal { flex-direction: row; justify-content: space-between; padding: 1rem; }
+}
+
+.navegacion-principal a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+    text-align: center;
+}
+
+.navegacion-principal a:hover { background-color: var(--primario); border-radius: 5px; }
+
+/* 5. Hero */
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+/* 6. Servicios */
+@media (min-width: 768px) {
+    .servicios { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 2rem; }
+}
+
+.servicio { display: flex; flex-direction: column; align-items: center; padding: 2rem; }
+.servicio .iconos {
+    height: 12rem; width: 12rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* 7. Formulario */
+.formulario { background-color: var(--gris); padding: 2rem; border-radius: 1rem; max-width: 60rem; margin: 0 auto; }
+.formulario fieldset { border: none; }
+.formulario legend { color: white; text-align: center; font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; text-transform: uppercase; }
+.campo { margin-bottom: 1.5rem; }
+.campo label { color: white; font-weight: bold; display: block; margin-bottom: .5rem; }
+.input-text { width: 100%; padding: 1.2rem; border-radius: .5rem; border: none; }
+
+/* 8. Botones */
+.boton {
+    background-color: var(--secundario);
+    color: white;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .5rem;
+    display: inline-block;
+    transition: background-color .3s;
+    border: none;
+    cursor: pointer;
+}
+.boton:hover { background-color: var(--oscuro); }
+
+/* 9. Footer */
+.footer { text-align: center; padding: 2rem; color: var(--primario); font-weight: bold; }
+
+/* Estilo del botón volver arriba */
+#btnTop {
+    background-color: #2c1fe9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+/* Estilo para el Modo Oscuro */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+body.dark-mode .white-card, body.dark-mode .sombra {
+    background-color: #1e1e1e;
+    color: white;
+}
